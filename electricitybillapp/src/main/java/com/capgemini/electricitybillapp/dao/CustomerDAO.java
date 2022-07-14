@@ -12,4 +12,5 @@ public interface CustomerDAO extends CrudRepository<Customer, Long>{
 	public Optional<Customer> findByAadharnumber(String aadhar);
 	public Optional<Customer> findByMoblienumber(String mobile);
 	public List<Customer> findByFirstname(String firstName);
+	public Optional<Customer> findByConsumerNumber(Long consumerNumber);
 }
