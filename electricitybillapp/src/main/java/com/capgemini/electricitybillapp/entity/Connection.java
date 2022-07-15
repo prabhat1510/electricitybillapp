@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.capgemini.electricitybillapp.constants.ConnectionType;
@@ -28,7 +29,7 @@ public class Connection {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private int connetionId;
+	private Long connetionId;
 	private Long consumerNum;
 
 	private LocalDate applicationDate;
@@ -42,4 +43,6 @@ public class Connection {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="customer_Id",referencedColumnName="customerId")
 	private Customer customer;
+	@OneToMany
+	private Reading reading;
 }

@@ -29,7 +29,8 @@ public class Reading {
 	private Integer unitsConsumed;
 	private LocalDate readingDate;
 	private Integer pricePerUnits;
+	/**
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="connection_Id",referencedColumnName="connectionId")
-	private Connection connection;
+	private Connection connection;**/
 }
